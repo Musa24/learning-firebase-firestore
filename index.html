@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Cloud Cafe</title>
+  </head>
+  <body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form">
+        <input type="text" placeholder="Cafe name" name="name" />
+        <input type="text" placeholder="Cafe city" name="city" />
+        <button>Add</button>
+      </form>
+
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <!-- Firebase firestore -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: 'AIzaSyD6y5YSLW5KjaXEVW6Sc2u2bC0Aa_q-eW0',
+        authDomain: 'fir-learning-net-ninja.firebaseapp.com',
+        databaseURL: 'https://fir-learning-net-ninja.firebaseio.com',
+        projectId: 'fir-learning-net-ninja',
+        storageBucket: 'fir-learning-net-ninja.appspot.com',
+        messagingSenderId: '763072710508',
+        appId: '1:763072710508:web:dba1a635832bed8d981549',
+        measurementId: 'G-0CLY9EM4VX',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      //Loading database
+      const db = firebase.firestore();
+    </script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
